@@ -1,21 +1,7 @@
-var a = prompt( 'Введите  число', '' );
-var b = prompt( 'Введите  степень', '' );
 
-function pow( a, b ) {
-  var result = 1;
-  
-  if (b < 0) {
-    return 1 / pow(a, -b);
-  }
-  
-  for( var i = 0; i < b; i++ ) {
-    result *= a;
-  }  
-  
-  return result;  
- }
-
-
-var bigResult = pow( a, b );
-console.log( bigResult );
+ $(".tab_item").not(":first").hide();
+    $(".wrapper .tab").click(function() {
+        $(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+        $(".tab_item").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
 
